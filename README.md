@@ -1,2 +1,2 @@
-# Estudo-Teol-gico
+# Estudo-Teoló-gico
 Mini blog voltad para estuos
