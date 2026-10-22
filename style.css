@@ -1,0 +1,158 @@
+:root {
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333;
+    --cor-titulo: #007bff;
+
+}
+
+.dp-menu li {
+    position: relative;
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 25px;
+    margin: 5px;
+    background-color: rgb(58, 187, 90);
+
+}
+
+.dp-menu ul li {
+    display: inline-block;
+    position: relative;
+
+}
+
+.dp-menu ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: background-color 0.3s;
+
+}
+
+.dp-menu ul li a:hover {
+    background-color: var(--cor-titulo);
+    color: #fff;
+
+}
+
+.dp-menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(147, 192, 153);
+    padding: 0;
+
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+
+}
+
+.dp-menu ul ul {
+  width: 150px;
+  padding-top: 5px;
+  position: absolute;
+  display: none;
+  top: 100%;
+  min-width: 160px;
+  z-index: 999;
+  left: 0;
+}
+
+.dp-menu ul ul li a {
+    display: block;
+
+}
+
+h1 {
+    color: var(--cor-titulo);
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+
+/* 1. Transforma a barra de navegação num container flexível para alinhar o menu e o botão */
+.dp-menu {
+    display: flex;
+    justify-content: space-between; /* Separa o menu à esquerda e o idioma à direita */
+    align-items: center;            /* Alinha verticalmente ao centro */
+    background-color: #2e7d32;      /* Ajuste para o tom de verde da sua barra */
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Garante que a lista do menu fica organizada */
+.dp-menu > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Estilo moderno para o botão de idiomas */
+.language {
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn {
+    background-color: rgba(0, 0, 0, 0.25); /* Fundo translúcido elegante */
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 3. Caixa do menu dropdown (opções de idiomas) */
+.language-selected {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    right: 0;      /* Alinha à direita do botão */
+    top: 110%;     /* Posiciona logo abaixo do botão */
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Estilo dos links dentro do dropdown */
+.language-selected a {
+    color: #333333;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.language-selected a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostra o menu de idiomas ao passar o rato por cima */
+.language:hover .language-selected {
+    display: block;
+    transition-duration: 0.5;
+}
